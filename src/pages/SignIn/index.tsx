@@ -29,7 +29,7 @@ const SignIn: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
   const navigation = useNavigation();
 
-  const handleSignIn = useCallback((data: object) => {
+  const handleSignIn = useCallback((data: string) => {
     console.log(data);
   }, []);
 
@@ -50,6 +50,7 @@ const SignIn: React.FC = () => {
             <View>
               <Title>Faça seu logon</Title>
             </View>
+
             <Form ref={formRef} onSubmit={handleSignIn}>
               <Input name="email" icon="mail" placeholder="E-mail" />
 
